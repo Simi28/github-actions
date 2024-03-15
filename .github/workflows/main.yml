@@ -14,7 +14,21 @@ jobs:
         uses: actions/checkout@v2
   
       - name: run code
-        run: node -e 'console.log("hello")'
+        run: node -e 'console.log("hello")
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v2
+        with: 
+          node-version: 3.11
+      
+      - name: checkout
+        uses: actions/checkout@v2
+  
+      - name: run code
+        run: python -c 'print("hello")
+        
        
          
               
