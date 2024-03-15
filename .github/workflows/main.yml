@@ -1,0 +1,23 @@
+name: testworkflow
+on:
+  workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup node
+        uses: actions/setup-node@v2
+        with: 
+          node-version: 19
+      
+      - name: run code
+        uses: actions/checkout@v2
+  
+      - name: run code
+        run: node -e 'console.log("hello")'
+       
+         
+              
+      
+  
+  
