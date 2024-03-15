@@ -1,4 +1,4 @@
-name: Python Workflow
+name: Multi-language Workflow
 
 on:
   push:
@@ -23,3 +23,18 @@ jobs:
 
     - name: Run Python script
       run: python app.py
+
+  js_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Run JavaScript file
+      run: node testjavascript.js
