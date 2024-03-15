@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with: 
           python-version: '3.x'
       
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v2
   
       - name: run code
-        run: python -c 'print("hello")
+        run: python3 -c 'print("hello")
         
        
          
