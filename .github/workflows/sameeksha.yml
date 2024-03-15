@@ -38,3 +38,16 @@ jobs:
 
     - name: Run JavaScript file
       run: node testjavascript.js
+
+  script_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run multiline script
+      run: |
+        echo "This is a multiline script."
+        echo "It can have multiple commands."
+        echo "For example, you can run shell commands here."
