@@ -12,6 +12,9 @@ jobs:
       matrix:
         python-version: [3.7, 3.8, 3.9]
 
+    env:
+      MY_ENV_VAR: "Python"
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -26,6 +29,8 @@ jobs:
 
   js_job:
     runs-on: ubuntu-latest
+    env:
+      MY_ENV_VAR: "JavaScript"
 
     steps:
     - name: Checkout code
@@ -41,6 +46,8 @@ jobs:
 
   script_job:
     runs-on: ubuntu-latest
+    env:
+      MY_ENV_VAR: "Shell"
 
     steps:
     - name: Checkout code
@@ -51,3 +58,4 @@ jobs:
         echo "This is a multiline script."
         echo "It can have multiple commands."
         echo "For example, you can run shell commands here."
+        echo "My environment variable is $MY_ENV_VAR"
